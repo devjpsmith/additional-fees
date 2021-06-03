@@ -1,18 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <additional-fees :fees="fees" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AdditionalFees from './components/AdditionalFees.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    AdditionalFees
+  },
+  data() {
+    return {
+      fees: [
+        {
+          id: 1,
+          description: 'one',
+          dollarAmount: 2.54,
+          percentageAmount: 0,
+          startDate: '',
+          endDate: ''
+        },
+        {
+          id: 2,
+          description: 'two',
+          dollarAmount: 2.54,
+          percentageAmount: 0,
+          startDate: '',
+          endDate: ''
+        },
+        {
+          id: 3,
+          description: 'three',
+          dollarAmount: 2.54,
+          percentageAmount: 0,
+          startDate: '',
+          endDate: ''
+        }
+      ]
+    }
+  },
 }
 </script>
 
